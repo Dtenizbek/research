@@ -7,6 +7,8 @@ Description: AWS Secrets Manager is a service that helps you protect access to y
 Implementation: Integrate AWS Secrets Manager with the application to securely store and manage the database passwords and other sensitive data. Use the AWS provider in Terraform to interact with AWS Secrets Manager and retrieve the secrets during the deployment of the application pods in EKS.
 Benefits: This approach provides a centralized and secure way to manage secrets, with features such as automatic rotation of credentials and fine-grained access control.
 Citation: "The AWS provider supports both AWS Secrets Manager and AWS Parameter Store. It can also be configured to rotate secrets when they expire and can synchronize AWS Secrets Manager secrets to Kubernetes Secrets" .
+https://aws.github.io/aws-eks-best-practices/security/docs/data/ 
+
 ##### AWS Secrets Manager Integration Example:
 Step 1: Create a Secret in AWS Secrets Manager
 ```
@@ -34,6 +36,7 @@ Description: HashiCorp Vault is a popular open-source tool for securely storing 
 Implementation: Utilize HashiCorp Vault to store and manage the sensitive data. Integrate Vault with the application to dynamically retrieve the secrets during runtime. Use Terraform to provision and manage the integration of Vault with the EKS cluster.
 Benefits: Vault offers advanced features such as dynamic secrets, encryption as a service, and comprehensive access control policies, providing a robust solution for managing sensitive data.
 Citation: "It is very common to have a single solution for secrets that would be nice to integrate with k8s. (Hashicorp vault or AWS services like param store/secrets manager)" .
+https://registry.terraform.io/providers/hashicorp/vault/latest/docs 
  ##### HashiCorp Vault Integration Example:
 Step 1: Provision HashiCorp Vault in AWS
 Use Terraform to provision HashiCorp Vault in AWS. Here's an example Terraform configuration:
