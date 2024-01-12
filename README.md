@@ -1,4 +1,4 @@
-# Proposed Solution for Managing Secrets in AWS EKS with Terraform
+## Proposed Solution for Managing Secrets in AWS EKS with Terraform
 Given the current setup of storing sensitive data like database passwords in a configuration file stored with the code in GitHub, it's important to improve the security and management of these secrets. Here are a couple of options for managing secrets in AWS EKS with Terraform:
 
 ###  AWS Secrets Manager Integration:
